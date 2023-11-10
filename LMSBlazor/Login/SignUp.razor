@@ -1,0 +1,82 @@
+﻿@layout LoginLayout
+@page "/account/register"
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager NavigationManager
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="css/login.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <section class="container forms">
+        <div class="form login">
+            <div class="form-content">
+                <header>Register</header>
+
+                <form action="#">
+                    <div class="field input-field">
+                        <input type="text" placeholder="Name" class="input">
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="text" placeholder="Surname" class="input">
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="email" placeholder="Email" class="input">
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="password" placeholder="Password" class="input">
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="password" placeholder="Confirm Password" class="input">
+                    </div>
+
+                    <div class="field button-field">
+                        <a href="/learner" class="register">
+                        <button>Register</button>
+                        </a>
+                    </div>
+
+                    <div class="form-link">
+                        <span>
+                            Have an account?  <a href="/" class="login">Login!</a>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+@code {
+
+    public int id { get; set; }
+
+    public string email { get; set; }
+
+    public string username { get; set; }
+
+    public string password { get; set; }
+
+    public string repeatPassword { get; set; }
+
+    public void VerifyPass()
+    {
+        if(password != repeatPassword)
+        {
+           
+        }
+    }
+
+}
+
